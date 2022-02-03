@@ -1,13 +1,12 @@
 const express = require("express");
-const fs = require("fs");
 const path = require("path"); 
 const app = express();
-// const bodyparser = require("body-parser");
+const mongoose = require('mongoose');
+const bodyparser = require("body-parser");
 
 // add mongoose
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/contactDance', {useNewParser: true});
-const port = 80;
+mongoose.connect('mongodb://localhost/contactDance', {useNewUrlParser: true});
+const port = 8000;
 
 // define mongoose schema
 var contactSchema = new mongoose.Schema({
@@ -43,10 +42,10 @@ app.get('/contact', (req,res)=>{
 app.post('/contact',(req, res)=>{
     var myData = new Contact(req.body);
     myData.save().then(()=>{
-        res.send("This item has been saved in Database")
+        res.send("This item has been saved to Database")
     }).catch(()=>{
         res.status(400).send("This item was not saved to the Database")
-    })
+    });
 
     // res.status(200).render('contact.pug');
 })
@@ -54,4 +53,4 @@ app.post('/contact',(req, res)=>{
 // START THE SERVER
 app.listen(port, ()=>{
     console.log(`The application started successfully on port ${port}`); 
-})
+});
