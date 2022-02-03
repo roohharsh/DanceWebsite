@@ -1,0 +1,10 @@
+touch .gitignore
+git init
+git add .
+git commit -m "Initial commit"
+git status    ## just to see
+copy ssh link of respective git repository
+git remote add origin link
+git push origin master    ## if project is private then we have to add ssh key
+add ssh key for our device
+git push origin master
