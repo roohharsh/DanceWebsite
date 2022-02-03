@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+/* used to import any other fonts */
+
+*{   /* this is also called CSS Reset */
+   margin:0;
+   box-sizing:border-box;
+   padding: 0; 
+}
+
+#logo{
+    display: flex;
+    color:white;
+    align-items:center;
+    margin:0px 14px;
+    font-size:26px;
+    margin-right:40px;
+}
+img{
+    height: 42px;
+    margin: -11px;
+    filter: invert(1);
+}
+
+#navbar{
+    background-color: rgb(202, 27, 193);
+    padding:18px 14px;
+}
+
+#navbar ul{
+    display: flex;
+    flex-direction: row;
+    /* justify-content:center; --> we want our navbar in the left not in center  */
+    align-items: center; /* --> Vertically center */
+}
+
+#navbar li{
+    list-style: none;
+}
+
+#navbar li a{
+    color:white;
+    text-decoration: none;
+    padding : 13px 30px;
+    font-size:25px;
+}
+#navbar li a:hover{
+    color:black;
+    text-decoration: none;
+    padding : 13px 30px;
+    font-weight: bold;
+    font-size:25px;
+}
+
+#intro{
+    padding-bottom: 70px;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family:'ZCOOL QingKe HuangYou';
+    font-size:65px;
+    /* background: center / contain no-repeat url('/static/bg.jpg'); --> it will give image full image according to height of the section & its width changes accordingly.*/
+    background: center / cover no-repeat url('/static/bg.jpg');
+    height:452px;
+    background-color: red;
+}
+#intro div.small{ /* intro k andar small class wale elements */
+    font-size:40px;
+    padding:5px;
+} 
+
+#mission{
+    height:294px;
+    background-color: white;
+    width:67%;
+    margin:auto;
+}
+#mission h1{
+    font-size:36px;
+    text-align: center;
+    padding-top: 12px;
+    font-family: 'yeon sung';
+}
+.card{
+    display:inline-block;
+    border:2px solid black;
+    border-radius: 10px;
+    width:29%;
+    margin:23px 20px;
+    height:188px;
+    background-color: white;
+}
+.card h3{
+    text-align:center;
+    margin:0 12px;
+    margin-top:14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.card-box{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.card-img{
+    height: 120px;
+    padding: 22px 27px;
+    margin:5px 9px;
+}
+.card-img img{
+    height:inherit;
+    margin: -12px;
+    filter: invert(0);
+}
+.card-content{
+    padding:10px;
+}
+.card-content p{
+    font-size:18px;
+}
+
+#sponsers{
+    height:250px;
+    background-color: #ea00ff2b;
+}
+#sponsers h1{
+    font-size: 36px;
+    text-align: center;
+    padding-top: 11px;
+    font-family: yeon sung;
+}
+#sponser{ /* --> For images */
+    height: 165px;
+    max-width: 993px;
+    margin: auto;
+    filter: invert(0);
+}
+.spImage{
+    height:80%;
+    margin:20px;
+    filter:invert(0);
+}
+
+#footer{
+    height:38px;
+    background-color: rgb(17, 20, 18);
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

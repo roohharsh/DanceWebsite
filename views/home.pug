@@ -1,0 +1,53 @@
+extends base.pug
+//- it extends the base.pug file
+
+//- for each block in body & head of base.pug we extend them in home.pug
+block scripts 
+  script(src='/static/index.js')
+
+block style 
+    style 
+      include ../static/style.css
+
+block content 
+
+    //- adding section 
+    section#intro 
+        //- | used to read it as para 
+        //- | section for pictures
+        div Welcome to harsh's Dance Academy 
+        div.small Eat Sleep Dance Repeat
+
+    section#mission
+        //- | Section for mission 
+        h1 Our Mission
+        div.card 
+            h3 Dance Perfection
+            div.card-box 
+                div.card-img 
+                    img(src="/static/img/1.png")
+                div.card-content 
+                    p This is the best dance academy of the universe
+        div.card 
+            h3 Dance the way you like
+            div.card-box 
+                div.card-img 
+                    img(src="/static/img/2.jpg")
+                div.card-content 
+                    p This is the best dance academy of the universe
+        div.card 
+            h3 Expert Teaching  
+            div.card-box 
+                div.card-img 
+                    img(src="/static/img/3.jpg")
+                div.card-content 
+                    p This is the best dance academy of the universe
+
+    section#sponsers 
+        //- | Section for sponsers 
+        h1 Our Sponsers 
+        div#sponser
+            img(src="/static/img/a.png",alt="Sponser Image", class="spImage")
+            img(src="/static/img/b.png",alt="Sponser Image", class="spImage")
+            img(src="/static/img/c.png",alt="Sponser Image", class="spImage")
+            img(src="/static/img/d.png",alt="Sponser Image", class="spImage")

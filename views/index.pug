@@ -1,0 +1,66 @@
+//- main focus on the intend(spaces) in every line.
+doctype html 
+html 
+  head 
+    title Harsh Dance Academy
+    style 
+      include ../static/style.css 
+  body 
+    nav#navbar.top 
+        //-  | this 
+        ul 
+           div#logo 
+               img(src="/static/img/logo.png")
+               | HDA
+           //- below syntax are easy way to write an li
+           li #[a(href="/") Home]
+           li #[a(href="/") About]
+           li #[a(href="/") Services]
+           li #[a(href="/") Class Info]
+           li #[a(href="/") Contact Us]
+        
+    //- adding section 
+    section#intro 
+        //- | used to read it as para 
+        //- | section for pictures
+        div Welcome to harsh's Dance Academy 
+        div.small Eat Sleep Dance Repeat
+
+    section#mission
+        //- | Section for mission 
+        h1 Our Mission
+        div.card 
+            h3 Dance Perfection
+            div.card-box 
+                div.card-img 
+                    img(src="/static/img/1.png")
+                div.card-content 
+                    p This is the best dance academy of the universe
+        div.card 
+            h3 Dance the way you like
+            div.card-box 
+                div.card-img 
+                    img(src="/static/img/2.jpg")
+                div.card-content 
+                    p This is the best dance academy of the universe
+        div.card 
+            h3 Expert Teaching  
+            div.card-box 
+                div.card-img 
+                    img(src="/static/img/3.jpg")
+                div.card-content 
+                    p This is the best dance academy of the universe
+
+    section#sponsers 
+        //- | Section for sponsers 
+        h1 Our Sponsers 
+        div#sponser
+            img(src="/static/img/a.png",alt="Sponser Image", class="spImage")
+            img(src="/static/img/b.png",alt="Sponser Image", class="spImage")
+            img(src="/static/img/c.png",alt="Sponser Image", class="spImage")
+            img(src="/static/img/d.png",alt="Sponser Image", class="spImage")
+
+    footer#footer 
+        | Copyright 2022 HarshDanceAcademy.com | All rights reserved  
+    script 
+      include ../static/script.js 
